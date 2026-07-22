@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-150;
+  }
+}
+
+.cv-font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.bn-font {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* Red highlighting for empty CV attributes per spec */
+.empty-field-highlight {
+  @apply bg-red-50 border-2 border-red-500 text-red-700 dark:bg-red-950/40 dark:border-red-600 dark:text-red-300 font-semibold px-2 py-1 rounded shadow-sm animate-pulse;
+}
+
+.empty-field-highlight:hover {
+  @apply bg-red-100 border-red-600 dark:bg-red-900/60;
+}
